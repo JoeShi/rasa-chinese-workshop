@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rasa-service
+  namespace: rasa-jw
+spec:
+  ports:
+    - port: 5005
+      targetPort: 5005
+      protocol: TCP
+  type: NodePort
+  selector:
+    app: rasa

@@ -1,0 +1,25 @@
+.DS_Store
+
+# MITIE
+data/total_word_feature_extractor_zh.dat
+
+# IDEA
+.idea
+
+# Jupyter notebook
+.ipynb_checkpoints
+
+# Trained models
+models/
+
+# RASA
+__pycache__/
+confmat.png
+errors.json
+hist.png
+graph.html
+
+# RASA X
+events.db
+rasa.db
+

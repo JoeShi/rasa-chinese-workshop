@@ -1,0 +1,20 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: zh
+
+pipeline:
+  - name: "MitieNLP"
+    model: "data/total_word_feature_extractor_zh.dat"
+  - name: "JiebaTokenizer"
+  - name: "MitieEntityExtractor"
+  - name: "EntitySynonymMapper"
+#  - name: "MitieFeaturizer"
+  - name: "CountVectorsFeaturizer"
+  - name: "EmbeddingIntentClassifier"
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+  - name: KerasPolicy
+  - name: MappingPolicy

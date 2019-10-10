@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: rasa-deployment
+  namespace: rasa-jw
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: rasa
+    spec:
+      containers:
+      - image: 057005827724.dkr.ecr.cn-northwest-1.amazonaws.com.cn/rasa-jw
+        env:
+          - name: AWS_ACCESS_KEY_ID
+            value: <aws-access-key-id>
+          - name: AWS_SECRET_ACCESS_KEY
+            value: <aws-secret-access-key>
+          - name: AWS_DEFAULT_REGION
+            value: cn-northwest-1
+          - name: BUCKET_NAME
+            value: rasa-dev
+        args: ["run", "-m", "20190823-222532.tar.gz", "--enable-api", "--remote-storage", "aws"]
+        imagePullPolicy: Always
+        name: rasa
+        ports:
+          - containerPort: 5005

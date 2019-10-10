@@ -1,0 +1,42 @@
+intents:
+  - weather_search
+  - affirm
+  - goodbye
+  - greet
+  - restaurant_search
+entities:
+  - date
+  - city
+  - food
+slots:
+  city:
+    type: text
+  date:
+    type: text
+    
+templates:
+  utter_affirm:
+    - text: 好的
+  utter_goodbye:
+    - text: 再见
+    - text: 给你一个满满的爱心
+  utter_greet:
+    - text: 您好
+  utter_greet_weather:
+    - text: 亲，我是一个天气机器人，就可以尝试问我天气哦！
+  utter_happy:
+    - text: 开心，比心
+  utter_medical:
+    - text: 天呐，主人早日康复啊
+  utter_weather:
+    - text: 今天天气晴朗，风和日丽的
+
+actions:
+  - utter_affirm
+  - utter_goodbye
+  - utter_greet
+  - utter_happy
+  - utter_weather
+  - utter_greet_weather
+  - utter_medical
+  - action_weather_search
