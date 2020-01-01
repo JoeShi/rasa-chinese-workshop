@@ -9,7 +9,7 @@
 ## weather + date 2
 * weather_search{"date": "周五"}
   - action_weather_search
-  
+    
 ## weather + city
 * weather_search{"city": "青岛"}
   - action_weather_search

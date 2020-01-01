@@ -18,7 +18,7 @@
 
 - [ ] 文本向量化
 
-- [ ] [RASA 项目简介](rasa_introduction.ipynb)
+- [x] [RASA 项目简介](rasa_introduction.ipynb)
 
 - [x] [RASA 项目中的数据准备阶段](rasa_prepare_data.ipynb)
 
@@ -26,7 +26,7 @@
 
 - [x] [RASA 构建天气查询机器人实战](rasa_core_weather_bot.ipynb)
 
-- [ ] RASA Chatbot 在 Kubernetes 中的部署实战
+- [x] [RASA Chatbot 在 Kubernetes 中的部署实战](rasa_k8s_chatbot.ipynb)
 
 - [ ] RSSA X 在 Kubernetes 中的部署实战
 
